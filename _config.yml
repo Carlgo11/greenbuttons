@@ -1,0 +1,9 @@
+title: GreenButtons
+description: "Green Buttons"
+url: "greenbuttons.carlgo11.com"
+
+permalink: pretty
+markdown: kramdown
+exclude:
+  - Gemfile
+  - Gemfile.lock

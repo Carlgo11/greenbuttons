@@ -1,0 +1,29 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+ {% for counter in (0..1000) %}
+   <button onclick="link();" class="btn btn-success">Click me!</button>
+ {% endfor %}
+ <script>
+ function link(){
+    var urls = [{% for item in site.data.urls %}"{{item}}"{% if forloop.last == false %},{% endif %}{%endfor%}]
+      var max = urls.length;
+      var n = Math.floor(Math.random() * max);
+      location.href = urls[n]
+ }
+ </script>
+</body>
+
+</html>
